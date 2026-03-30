@@ -1,0 +1,24 @@
+2026-03-28 21:46:01,034 | INFO | ===== DATA VALIDATION STARTED =====
+2026-03-28 21:46:01,038 | INFO | Data loaded from data/loan.csv | Shape: (2000, 7)
+2026-03-28 21:53:57,620 | INFO | ===== DATA VALIDATION STARTED =====
+2026-03-28 21:53:57,626 | INFO | Data loaded from data/loan.csv | Shape: (2000, 7)
+2026-03-28 21:56:56,467 | INFO | ===== DATA VALIDATION STARTED =====
+2026-03-28 21:56:56,473 | INFO | Data loaded from data/loan.csv | Shape: (2000, 7)
+2026-03-28 21:56:56,500 | ERROR | Error while processing DataContextConfig: validations_store_name datasources anonymous_usage_statistics evaluation_parameter_store_name
+2026-03-28 21:56:56,500 | ERROR | Encountered errors during loading config.  See ValidationError for more details.
+2026-03-28 21:59:00,849 | INFO | ===== DATA VALIDATION STARTED =====
+2026-03-28 21:59:00,856 | INFO | Data loaded from data/loan.csv | Shape: (2000, 7)
+2026-03-28 22:03:21,065 | INFO | ===== DATA VALIDATION STARTED =====
+2026-03-28 22:03:21,070 | INFO | Data loaded from data/loan.csv | Shape: (2000, 7)
+2026-03-28 22:03:53,435 | INFO | ===== DATA VALIDATION STARTED =====
+2026-03-28 22:03:53,439 | INFO | Data loaded from data/loan.csv | Shape: (2000, 7)
+2026-03-28 22:10:35,790 | INFO | ===== DATA VALIDATION STARTED =====
+2026-03-28 22:10:35,797 | INFO | Data loaded from data/loan.csv | Shape: (2000, 7)
+2026-03-28 22:10:35,822 | ERROR | Error while processing DataContextConfig: evaluation_parameter_store_name anonymous_usage_statistics validations_store_name datasources
+2026-03-28 22:10:35,822 | ERROR | Encountered errors during loading config.  See ValidationError for more details.
+2026-03-28 22:36:05,128 | INFO | ===== DATA VALIDATION STARTED =====
+2026-03-28 22:36:05,133 | INFO | Data loaded from data/loan.csv | Shape: (2000, 7)
+2026-03-28 22:36:05,155 | ERROR | Error while processing DataContextConfig: validations_store_name evaluation_parameter_store_name datasources anonymous_usage_statistics
+2026-03-28 22:36:05,155 | ERROR | Encountered errors during loading config.  See ValidationError for more details.
+2026-03-28 22:43:44,193 | INFO | ===== DATA VALIDATION STARTED =====
+2026-03-28 22:43:44,201 | INFO | Data loaded from data/loan.csv | Shape: (2000, 7)

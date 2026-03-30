@@ -1,0 +1,286 @@
+2026-03-28 21:11:39,273 INFO Config loaded successfully
+2026-03-28 21:29:35,200 INFO Config loaded successfully
+2026-03-28 21:29:35,205 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-28 21:29:35,206 INFO Categorical features: ['Employment_Status']
+2026-03-28 21:30:14,762 INFO Config loaded successfully
+2026-03-28 21:30:14,766 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-28 21:30:14,766 INFO Categorical features: ['Employment_Status']
+2026-03-30 04:57:51,540 INFO Config loaded successfully
+2026-03-30 04:57:51,545 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 04:57:51,545 INFO Categorical features: ['Employment_Status']
+2026-03-30 04:57:51,671 INFO Config loaded successfully
+2026-03-30 04:57:51,676 INFO ===== HYPERPARAMETER TUNING STARTED =====
+2026-03-30 04:57:51,678 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-03-30 04:57:51,684 INFO Missing values handled (no encoding applied)
+2026-03-30 04:57:51,685 INFO Starting feature engineering...
+2026-03-30 04:57:51,694 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-03-30 04:57:51,694 INFO New DataFrame shape: (2000, 14)
+2026-03-30 04:57:51,695 INFO Splitting data: test_size=0.2, random_state=42
+2026-03-30 04:57:51,698 ERROR ❌ Hyperparameter tuning failed
+Traceback (most recent call last):
+  File "/home/zaina/loann_mlops_project/src/hyperparameter_tuning.py", line 92, in run_tuning
+    pipeline = build_model_pipeline()
+TypeError: build_model_pipeline() missing 1 required positional argument: 'df'
+2026-03-30 05:00:03,382 INFO Config loaded successfully
+2026-03-30 05:00:03,387 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 05:00:03,387 INFO Categorical features: ['Employment_Status']
+2026-03-30 05:00:03,502 INFO Config loaded successfully
+2026-03-30 05:00:03,507 INFO ===== HYPERPARAMETER TUNING STARTED =====
+2026-03-30 05:00:03,511 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-03-30 05:00:03,520 INFO Missing values handled (no encoding applied)
+2026-03-30 05:00:03,520 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-03-30 05:00:03,520 INFO Starting feature engineering...
+2026-03-30 05:00:03,520 INFO Starting feature engineering...
+2026-03-30 05:00:03,531 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-03-30 05:00:03,531 INFO New DataFrame shape: (2000, 14)
+2026-03-30 05:00:03,531 INFO Feature engineering completed. Added features: ['Loan_Burden', 'Income_Loan_Ratio', 'Age_Group', 'Income_per_EMI', 'Income_Group', 'EMI', 'Credit_Category']
+2026-03-30 05:00:03,531 INFO New DataFrame shape: (2000, 14)
+2026-03-30 05:00:03,533 INFO Splitting data: test_size=0.2, random_state=42
+2026-03-30 05:00:03,536 INFO Splitting data: test_size=0.2, random_state=42
+2026-03-30 05:00:03,536 INFO Building model pipeline (DF-based)...
+2026-03-30 05:00:03,537 INFO Pipeline built successfully ✅
+2026-03-30 05:00:03,537 INFO Grid Search started | Scoring: f1
+2026-03-30 05:00:08,529 INFO ✅ Best Params: {'classifier__max_depth': 5, 'classifier__n_estimators': 100}
+2026-03-30 05:00:08,529 INFO ✅ Best CV Score (f1): 0.9827
+2026-03-30 05:00:08,600 INFO 📊 Test Accuracy: 0.9975
+2026-03-30 05:00:08,600 INFO 📊 Test F1 Score: 0.9935
+2026-03-30 05:00:08,656 WARNING Retrying (Retry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:00:13,460 WARNING Retrying (Retry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:00:21,719 WARNING Retrying (Retry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:00:38,142 WARNING Retrying (Retry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:01:10,402 WARNING Retrying (Retry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:01:10,402 ERROR ❌ Hyperparameter tuning failed
+Traceback (most recent call last):
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/lib/python3.10/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 996, in send
+    self.connect()
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+  [Previous line repeated 2 more times]
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 108, in http_request
+    return _get_http_response_with_retries(
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/mlflow/utils/request_utils.py", line 212, in _get_http_response_with_retries
+    return session.request(method, url, allow_redirects=allow_redirects, **kwargs)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/requests/adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaina/loann_mlops_project/src/hyperparameter_tuning.py", line 149, in run_tuning
+    mlflow.set_experiment(EXPERIMENT_NAME)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 142, in set_experiment
+    experiment = client.get_experiment_by_name(experiment_name)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/mlflow/tracking/client.py", line 539, in get_experiment_by_name
+    return self._tracking_client.get_experiment_by_name(name)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 236, in get_experiment_by_name
+    return self.store.get_experiment_by_name(name)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 323, in get_experiment_by_name
+    response_proto = self._call_endpoint(GetExperimentByName, req_body)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 60, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 216, in call_endpoint
+    response = http_request(**call_kwargs)
+  File "/home/zaina/loann_mlops_project/.venv/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 130, in http_request
+    raise MlflowException(f"API request to {url} failed with exception {e}")
+mlflow.exceptions.MlflowException: API request to http://127.0.0.1:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-03-30 05:05:31,599 INFO Config loaded successfully
+2026-03-30 05:05:31,603 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 05:05:31,603 INFO Categorical features: ['Employment_Status']
+2026-03-30 05:05:31,660 INFO Config loaded successfully
+2026-03-30 05:05:54,805 INFO Config loaded successfully
+2026-03-30 05:05:54,808 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 05:05:54,808 INFO Categorical features: ['Employment_Status']
+2026-03-30 05:05:54,861 INFO Config loaded successfully
+2026-03-30 05:05:54,867 INFO ===== HYPERPARAMETER TUNING STARTED =====
+2026-03-30 05:05:54,870 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-03-30 05:05:54,873 INFO Missing values handled (no encoding applied)
+2026-03-30 05:05:54,873 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-03-30 05:05:54,874 INFO Starting feature engineering...
+2026-03-30 05:05:54,874 INFO Starting feature engineering...
+2026-03-30 05:05:54,882 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-03-30 05:05:54,882 INFO New DataFrame shape: (2000, 14)
+2026-03-30 05:05:54,882 INFO Feature engineering completed. Added features: ['Income_Group', 'Age_Group', 'Credit_Category', 'Income_per_EMI', 'EMI', 'Income_Loan_Ratio', 'Loan_Burden']
+2026-03-30 05:05:54,882 INFO New DataFrame shape: (2000, 14)
+2026-03-30 05:05:54,884 INFO Splitting data: test_size=0.2, random_state=42
+2026-03-30 05:05:54,890 INFO Splitting data: test_size=0.2, random_state=42
+2026-03-30 05:05:54,890 INFO Building model pipeline (DF-based)...
+2026-03-30 05:05:54,892 INFO Pipeline built successfully ✅
+2026-03-30 05:05:54,892 INFO Grid Search started | Scoring: f1
+2026-03-30 05:06:00,270 INFO ✅ Best Params: {'classifier__max_depth': 5, 'classifier__n_estimators': 100}
+2026-03-30 05:06:00,270 INFO ✅ Best CV Score (f1): 0.9827
+2026-03-30 05:06:00,340 INFO 📊 Test Accuracy: 0.9975
+2026-03-30 05:06:00,340 INFO 📊 Test F1 Score: 0.9935
+2026-03-30 05:06:03,132 INFO 💾 Model saved at: models/best_model_20260330_050554.pkl
+2026-03-30 05:06:03,132 INFO 📦 Metadata saved at: models/tuning_metadata_20260330_050554.pkl
+2026-03-30 05:06:03,132 INFO ===== HYPERPARAMETER TUNING COMPLETED =====
+2026-03-30 05:20:57,549 INFO Config loaded successfully
+2026-03-30 05:20:57,556 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 05:20:57,556 INFO Categorical features: ['Employment_Status']
+2026-03-30 05:20:57,670 INFO Config loaded successfully
+2026-03-30 05:20:57,675 INFO ===== TRAINING PIPELINE STARTED =====
+2026-03-30 05:20:58,261 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-03-30 05:20:58,268 INFO Missing values handled (no encoding applied)
+2026-03-30 05:20:58,268 INFO Data Loaded | Shape: (2000, 7)
+2026-03-30 05:20:58,268 INFO Starting feature engineering...
+2026-03-30 05:20:58,280 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-03-30 05:20:58,280 INFO New DataFrame shape: (2000, 14)
+2026-03-30 05:20:58,284 INFO Features saved at feature_store/features_20260330_052057.pkl
+2026-03-30 05:20:58,284 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-03-30 05:20:58,285 INFO Splitting data: test_size=0.2, random_state=42
+2026-03-30 05:20:58,289 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-03-30 05:20:58,289 INFO Building model pipeline (DF-based)...
+2026-03-30 05:20:58,290 INFO Pipeline built successfully ✅
+2026-03-30 05:20:58,290 INFO Model Pipeline Created
+2026-03-30 05:20:59,003 INFO Model Training Completed
+2026-03-30 05:20:59,122 INFO Accuracy: 0.9975
+2026-03-30 05:20:59,122 INFO Precision: 1.0000
+2026-03-30 05:20:59,123 INFO Recall: 0.9872
+2026-03-30 05:20:59,123 INFO F1 Score: 0.9935
+2026-03-30 05:20:59,198 INFO Pipeline saved at models/model_20260330_052057.pkl
+2026-03-30 05:20:59,198 INFO Model Saved at: models/model_20260330_052057.pkl
+2026-03-30 05:21:02,240 INFO Metadata Saved
+2026-03-30 05:21:02,240 INFO ===== TRAINING PIPELINE COMPLETED =====
+2026-03-30 05:32:26,858 INFO Config loaded successfully
+2026-03-30 05:32:26,865 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 05:32:26,865 INFO Categorical features: ['Employment_Status']
+2026-03-30 05:32:26,981 INFO Config loaded successfully
+2026-03-30 05:32:26,986 INFO ===== TRAINING PIPELINE STARTED =====
+2026-03-30 05:32:27,000 WARNING Retrying (Retry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:32:31,615 WARNING Retrying (Retry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:32:40,306 WARNING Retrying (Retry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:32:56,020 WARNING Retrying (Retry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:33:28,328 WARNING Retrying (Retry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:33:44,501 INFO Config loaded successfully
+2026-03-30 05:33:44,504 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 05:33:44,504 INFO Categorical features: ['Employment_Status']
+2026-03-30 05:33:44,585 INFO Config loaded successfully
+2026-03-30 05:33:44,590 INFO ===== TRAINING PIPELINE STARTED =====
+2026-03-30 05:33:44,604 WARNING Retrying (Retry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:33:48,929 WARNING Retrying (Retry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:33:56,652 WARNING Retrying (Retry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:34:13,306 WARNING Retrying (Retry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 05:34:45,241 WARNING Retrying (Retry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:02:12,073 INFO Config loaded successfully
+2026-03-30 22:02:12,078 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 22:02:12,078 INFO Categorical features: ['Employment_Status']
+2026-03-30 22:02:12,197 INFO Config loaded successfully
+2026-03-30 22:02:12,202 INFO ===== TRAINING PIPELINE STARTED =====
+2026-03-30 22:02:12,215 WARNING Retrying (Retry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:02:16,578 WARNING Retrying (Retry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:02:25,450 WARNING Retrying (Retry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:02:42,282 WARNING Retrying (Retry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:03:15,271 WARNING Retrying (Retry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:08:10,255 INFO Config loaded successfully
+2026-03-30 22:08:10,259 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 22:08:10,259 INFO Categorical features: ['Employment_Status']
+2026-03-30 22:08:10,325 INFO Config loaded successfully
+2026-03-30 22:08:10,330 INFO ===== TRAINING PIPELINE STARTED =====
+2026-03-30 22:08:10,345 WARNING Retrying (Retry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5001): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:08:15,229 WARNING Retrying (Retry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5001): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:08:23,345 WARNING Retrying (Retry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5001): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:08:40,273 WARNING Retrying (Retry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5001): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:09:13,278 WARNING Retrying (Retry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5001): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-03-30 22:15:56,793 INFO Config loaded successfully
+2026-03-30 22:15:56,798 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 22:15:56,798 INFO Categorical features: ['Employment_Status']
+2026-03-30 22:15:56,915 INFO Config loaded successfully
+2026-03-30 22:15:56,920 INFO ===== TRAINING PIPELINE STARTED =====
+2026-03-30 22:15:57,024 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-03-30 22:15:57,033 INFO Missing values handled (no encoding applied)
+2026-03-30 22:15:57,033 INFO Data Loaded | Shape: (2000, 7)
+2026-03-30 22:15:57,033 INFO Starting feature engineering...
+2026-03-30 22:15:57,043 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-03-30 22:15:57,044 INFO New DataFrame shape: (2000, 14)
+2026-03-30 22:15:57,048 INFO Features saved at feature_store/features_20260330_221556.pkl
+2026-03-30 22:15:57,049 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-03-30 22:15:57,049 INFO Splitting data: test_size=0.2, random_state=42
+2026-03-30 22:15:57,052 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-03-30 22:15:57,052 INFO Building model pipeline (DF-based)...
+2026-03-30 22:15:57,053 INFO Pipeline built successfully ✅
+2026-03-30 22:15:57,053 INFO Model Pipeline Created
+2026-03-30 22:15:57,785 INFO Model Training Completed
+2026-03-30 22:15:57,904 INFO Accuracy: 0.9975
+2026-03-30 22:15:57,904 INFO Precision: 1.0000
+2026-03-30 22:15:57,904 INFO Recall: 0.9872
+2026-03-30 22:15:57,904 INFO F1 Score: 0.9935
+2026-03-30 22:15:57,982 INFO Pipeline saved at models/model_20260330_221556.pkl
+2026-03-30 22:15:57,983 INFO Model Saved at: models/model_20260330_221556.pkl
+2026-03-30 22:16:00,266 INFO Metadata Saved
+2026-03-30 22:16:00,266 INFO ===== TRAINING PIPELINE COMPLETED =====
+2026-03-30 22:32:15,801 INFO Config loaded successfully
+2026-03-30 22:32:15,809 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-03-30 22:32:15,810 INFO Categorical features: ['Employment_Status']
+2026-03-30 22:32:15,933 INFO Config loaded successfully
+2026-03-30 22:32:15,939 INFO ===== TRAINING PIPELINE STARTED =====
+2026-03-30 22:32:16,023 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-03-30 22:32:16,032 INFO Missing values handled (no encoding applied)
+2026-03-30 22:32:16,032 INFO Data Loaded | Shape: (2000, 7)
+2026-03-30 22:32:16,033 INFO Starting feature engineering...
+2026-03-30 22:32:16,045 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-03-30 22:32:16,045 INFO New DataFrame shape: (2000, 14)
+2026-03-30 22:32:16,049 INFO Features saved at feature_store/features_20260330_223215.pkl
+2026-03-30 22:32:16,049 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-03-30 22:32:16,050 INFO Splitting data: test_size=0.2, random_state=42
+2026-03-30 22:32:16,054 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-03-30 22:32:16,054 INFO Building model pipeline (DF-based)...
+2026-03-30 22:32:16,056 INFO Pipeline built successfully ✅
+2026-03-30 22:32:16,056 INFO Model Pipeline Created
+2026-03-30 22:32:16,908 INFO Model Training Completed
+2026-03-30 22:32:17,036 INFO Accuracy: 0.9975
+2026-03-30 22:32:17,036 INFO Precision: 1.0000
+2026-03-30 22:32:17,036 INFO Recall: 0.9872
+2026-03-30 22:32:17,036 INFO F1 Score: 0.9935
+2026-03-30 22:32:17,186 INFO Model Saved at: models/model_20260330_223215.pkl
+2026-03-30 22:32:17,186 INFO Pipeline Saved at: models/pipeline_20260330_223215.pkl
+2026-03-30 22:32:20,055 INFO Metadata Saved
+2026-03-30 22:32:20,055 INFO ===== TRAINING PIPELINE COMPLETED =====
