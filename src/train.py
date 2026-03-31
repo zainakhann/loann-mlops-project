@@ -98,9 +98,20 @@ def main():
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    # MLflow setup
-    if MLFLOW_URI:
+    # ----------------------------
+    # MLflow setup (FIXED)
+    # ----------------------------
+    IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
+
+    if IS_CI:
+        # GitHub Actions → force local tracking
+        mlflow.set_tracking_uri("file:./mlruns")
+    elif MLFLOW_URI:
+        # Local MLflow server
         mlflow.set_tracking_uri(MLFLOW_URI)
+    else:
+        # Fallback
+        mlflow.set_tracking_uri("file:./mlruns")
 
     mlflow.set_experiment(EXPERIMENT_NAME)
 
@@ -168,7 +179,7 @@ def main():
         logging.info(f"F1 Score: {f1:.4f}")
 
         # ----------------------------
-        # Save Model & Pipeline (STEP 17 UPGRADE)
+        # Save Model & Pipeline
         # ----------------------------
         model_path = os.path.join(MODEL_PATH, f"model_{timestamp}.pkl")
         pipeline_path = os.path.join(MODEL_PATH, f"pipeline_{timestamp}.pkl")
@@ -192,7 +203,7 @@ def main():
 
         mlflow.sklearn.log_model(pipeline, "model")
 
-        # Organized artifacts
+        # Artifacts
         mlflow.log_artifact(model_path, artifact_path="model")
         mlflow.log_artifact(pipeline_path, artifact_path="pipeline")
         mlflow.log_artifact(feature_path, artifact_path="features")
