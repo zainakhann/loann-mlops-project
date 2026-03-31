@@ -35,7 +35,7 @@ paths:
 
 mlflow:
   experiment_name: "loan_prediction_model"
-  tracking_uri: "http://127.0.0.1:5000"
+  tracking_uri: "file:./mlruns"
   register_model: true
 
 api:
