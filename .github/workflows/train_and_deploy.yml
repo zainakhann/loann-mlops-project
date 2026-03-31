@@ -9,22 +9,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ✅ Updated versions
+      # ----------------------------
+      # Checkout repo
+      # ----------------------------
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # ----------------------------
+      # Setup Python
+      # ----------------------------
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # ✅ Install everything properly
+      # ----------------------------
+      # Install dependencies
+      # ----------------------------
       - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install -r requirements.txt
           pip install dvc
 
-      # ✅ Debug (CRITICAL)
+      # ----------------------------
+      # Debug file structure
+      # ----------------------------
       - name: Debug file structure
         run: |
           echo "Current directory:"
@@ -32,15 +42,23 @@ jobs:
           echo "Listing files:"
           ls -R
 
-      # ✅ DVC Pull (SAFE VERSION)
+      # ----------------------------
+      # Pull data from DVC (optional, safe)
+      # ----------------------------
       - name: Pull data from DVC
         run: dvc pull || echo "DVC pull failed, continuing..."
 
-      # ✅ Run training
+      # ----------------------------
+      # Run training with PYTHONPATH fix
+      # ----------------------------
       - name: Run training
-        run: python src/train.py
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          python src/train.py
 
-      # ✅ Upload artifacts
+      # ----------------------------
+      # Upload artifacts
+      # ----------------------------
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -54,18 +72,30 @@ jobs:
     needs: train
 
     steps:
+      # ----------------------------
+      # Checkout repo again
+      # ----------------------------
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # ----------------------------
+      # Setup Docker Buildx
+      # ----------------------------
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      # ----------------------------
+      # Login to Docker Hub
+      # ----------------------------
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      # ----------------------------
+      # Build & Push Docker Image
+      # ----------------------------
       - name: Build & Push Docker Image
         run: |
           docker build -t loan-mlops:latest .
