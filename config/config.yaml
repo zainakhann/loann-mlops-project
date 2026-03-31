@@ -1,93 +1,83 @@
-project: 
-  name: "loan_mlops" 
-  environment: "dev" 
-  random_state: 42 
- 
-data: 
-  raw_path: "data/loan.csv" 
-  processed_path: "data/processed.csv" 
-  test_size: 0.2 
-  target_column: "Loan_Approved" 
- 
-features: 
-  feature_store_path: "feature_store/" 
-  save_engineered_features: true 
-  versioning: true 
- 
-model: 
-  name: "RandomForest" 
- 
-  base_params: 
-    n_estimators: 200 
-    max_depth: 10 
- 
-  tuning: 
-    enabled: true 
-    cv_folds: 3 
-    scoring: "f1" 
-    param_grid: 
-      n_estimators: [100, 200, 300] 
-      max_depth: [5, 10, 15] 
- 
-paths: 
-  models: "models/" 
-  pipeline_path: "models/pipeline.pkl" 
-  logs: "logs/" 
-  artifacts: "artifacts/" 
- 
-mlflow: 
-  experiment_name: "loan_prediction_model" 
-  tracking_uri: "http://127.0.0.1:5000" 
-  register_model: true 
- 
-api: 
-  host: "0.0.0.0" 
-  port: 8000 
- 
-monitoring: 
-  prometheus_port: 8001 
-  drift_report_path: "monitoring/drift_report.html" 
-  enable_drift_detection: true 
- 
-# ---------------------------- 
-# VALIDATION (REAL EXPECTATIONS) 
-# ---------------------------- 
-validation: 
-  enabled: true 
-  expectation_suite: "loan_suite.json" 
- 
-  numeric: 
-    Age: 
-      min: 18 
-      max: 100 
- 
-    Income: 
-      min: 0 
-      max: 1000000 
- 
-    Credit_Score: 
-      min: 300 
-      max: 850 
- 
-    Loan_Amount: 
-      min: 0 
-      max: 1000000 
- 
-    Loan_Term: 
-      min: 6 
-      max: 360 
- 
-  categorical: 
-    Employment_Status: 
-      - Employed 
-      - Self-Employed 
-      - Unemployed 
- 
+project:
+  name: "loan_mlops"
+  environment: "dev"
+  random_state: 42
+
+data:
+  raw_path: "data/loan.csv"
+  processed_path: "data/processed.csv"
+  test_size: 0.2
+  target_column: "Loan_Approved"
+
+features:
+    feature_store_path: "feature_store/"
+    save_engineered_features: true
+    versioning: true
+
+model:
+  name: "RandomForest"
+  base_params:
+    n_estimators: 200
+    max_depth: 10
+  tuning:
+    enabled: true
+    cv_folds: 3
+    scoring: "f1"
+    param_grid:
+      n_estimators: [100, 200, 300]
+      max_depth: [5, 10, 15]
+
+paths:
+  models: "models/"
+  pipeline_path: "models/pipeline.pkl"
+  logs: "logs/"
+  artifacts: "artifacts/"
+
+mlflow:
+  experiment_name: "loan_prediction_model"
+  tracking_uri: "http://127.0.0.1:5000"
+  register_model: true
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+
+monitoring:
+  prometheus_port: 8001
+  drift_report_path: "monitoring/drift_report.html"
+  enable_drift_detection: true
+
+# ----------------------------
+# VALIDATION (REAL EXPECTATIONS)
+# ----------------------------
+validation:
+  enabled: true
+  expectation_suite: "loan_suite.json"
+  numeric:
+    Age:
+      min: 18
+      max: 100
+    Income:
+      min: 0
+      max: 1000000
+    Credit_Score:
+      min: 300
+      max: 850
+    Loan_Amount:
+      min: 0
+      max: 1000000
+    Loan_Term:
+      min: 6
+      max: 360
+  categorical:
+    Employment_Status:
+      - Employed
+      - Self-Employed
+      - Unemployed
   target:
     Loan_Approved:
       - 0
       - 1
-
   not_null:
     - Age
     - Income
