@@ -199,7 +199,7 @@ def main():
         mlflow.log_metric("f1_score", f1)
 
         # Log model without triggering proxy issue
-        mlflow.sklearn.log_model(pipeline, "model", artifact_path="model")
+        mlflow.sklearn.log_model(pipeline, "model")
 
         # Log artifacts
         mlflow.log_artifact(model_path, artifact_path="model")
