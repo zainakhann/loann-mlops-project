@@ -34,8 +34,8 @@ paths:
   artifacts: "artifacts/"
 
 mlflow:
-  tracking_uri: "http://localhost:5000"  # This points to your local MLflow server
-  artifact_uri: "file:///path/to/local/artifacts"  # Directory for model artifacts
+  tracking_uri: "http://localhost:5000"  # Local MLflow server
+  artifact_uri: "file:///home/runner/work/loann-mlops-project/loann-mlops-project/mlflow_artifacts"  # Local directory for model artifacts
   experiment_name: "loan_prediction_model"
 
 api:
