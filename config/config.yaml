@@ -34,9 +34,9 @@ paths:
   artifacts: "artifacts/"
 
 mlflow:
+  tracking_uri: "http://localhost:5000"  # This points to your local MLflow server
+  artifact_uri: "file:///path/to/local/artifacts"  # Directory for model artifacts
   experiment_name: "loan_prediction_model"
-  tracking_uri: "file:./mlruns"
-  register_model: true
 
 api:
   host: "0.0.0.0"
