@@ -98,20 +98,19 @@ def main():
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    # ----------------------------
-    # MLflow setup (CI-proof)
-    # ----------------------------
-    IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
-    MLRUNS_PATH = os.path.abspath("mlruns")  # absolute path for local file store
+# ----------------------------
+# MLflow setup (FIXED)
+# ----------------------------
+IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
 
-    # If running on CI or no MLFLOW_URI, use the local MLflow instance
-    if IS_CI or not MLFLOW_URI:
-        mlflow.set_tracking_uri(f"file://{MLRUNS_PATH}")
-    else:
-        # Set the tracking URI for local or remote MLflow server
-        mlflow.set_tracking_uri("http://localhost:5001")  # Use your MLflow server URI here
+if IS_CI:
+    # ✅ Simple local logging (NO artifact_uri confusion)
+    mlflow.set_tracking_uri("file:./mlruns")
+else:
+    # ✅ Use your local MLflow server normally
+    mlflow.set_tracking_uri(MLFLOW_URI)
 
-    mlflow.set_experiment(EXPERIMENT_NAME)
+mlflow.set_experiment(EXPERIMENT_NAME)
 
     with mlflow.start_run(run_name=f"train_{timestamp}"):
 
