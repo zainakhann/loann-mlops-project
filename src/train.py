@@ -104,11 +104,12 @@ def main():
     IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
     MLRUNS_PATH = os.path.abspath("mlruns")  # absolute path for local file store
 
+    # If running on CI or no MLFLOW_URI, use the local MLflow instance
     if IS_CI or not MLFLOW_URI:
-        # Use local file store with absolute path
         mlflow.set_tracking_uri(f"file://{MLRUNS_PATH}")
     else:
-        mlflow.set_tracking_uri(MLFLOW_URI)
+        # Set the tracking URI for local or remote MLflow server
+        mlflow.set_tracking_uri("http://localhost:5001")  # Use your MLflow server URI here
 
     mlflow.set_experiment(EXPERIMENT_NAME)
 
@@ -148,21 +149,18 @@ def main():
 
         # ----------------------------
         # Build Pipeline
-        # ----------------------------
         pipeline: Pipeline = build_model_pipeline(X_train)
 
         logging.info("Model Pipeline Created")
 
         # ----------------------------
         # Train Model
-        # ----------------------------
         pipeline.fit(X_train, y_train)
 
         logging.info("Model Training Completed")
 
         # ----------------------------
         # Evaluate Model
-        # ----------------------------
         y_pred = pipeline.predict(X_test)
 
         acc = accuracy_score(y_test, y_pred)
@@ -177,7 +175,6 @@ def main():
 
         # ----------------------------
         # Save Model & Pipeline
-        # ----------------------------
         model_path = os.path.join(MODEL_PATH, f"model_{timestamp}.pkl")
         pipeline_path = os.path.join(MODEL_PATH, f"pipeline_{timestamp}.pkl")
 
@@ -189,7 +186,6 @@ def main():
 
         # ----------------------------
         # MLflow Logging
-        # ----------------------------
         mlflow.log_param("model", "RandomForest")
         mlflow.log_param("git_commit", get_git_commit_hash())
 
@@ -198,7 +194,7 @@ def main():
         mlflow.log_metric("recall", rec)
         mlflow.log_metric("f1_score", f1)
 
-        # Log model without triggering proxy issue
+        # Log the model using MLflow
         mlflow.sklearn.log_model(pipeline, "model")
 
         # Log artifacts
@@ -212,7 +208,6 @@ def main():
 
         # ----------------------------
         # Metadata
-        # ----------------------------
         metadata = {
             "timestamp": timestamp,
             "model_path": model_path,
