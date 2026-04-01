@@ -106,6 +106,7 @@ jobs:
         run: |
           docker build -t loann-mlops:latest .
           docker tag loann-mlops:latest zainakhann/loann-mlops:latest
-          docker push zainakhann/loann-mlops:tagname
+          docker push zainakhann/loann-mlops:latest
+          
           
           
