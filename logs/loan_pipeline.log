@@ -284,3 +284,377 @@ mlflow.exceptions.MlflowException: API request to http://127.0.0.1:5000/api/2.0/
 2026-03-30 22:32:17,186 INFO Pipeline Saved at: models/pipeline_20260330_223215.pkl
 2026-03-30 22:32:20,055 INFO Metadata Saved
 2026-03-30 22:32:20,055 INFO ===== TRAINING PIPELINE COMPLETED =====
+2026-04-01 00:40:29,536 INFO Config loaded successfully
+2026-04-01 00:40:29,541 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 00:40:29,541 INFO Categorical features: ['Employment_Status']
+2026-04-01 00:40:29,666 INFO Config loaded successfully
+2026-04-01 00:40:29,671 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 00:43:16,283 INFO Config loaded successfully
+2026-04-01 00:43:16,288 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 00:43:16,288 INFO Categorical features: ['Employment_Status']
+2026-04-01 00:43:16,408 INFO Config loaded successfully
+2026-04-01 00:43:16,413 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 00:43:16,495 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 00:43:16,502 INFO Missing values handled (no encoding applied)
+2026-04-01 00:43:16,502 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 00:43:16,503 INFO Starting feature engineering...
+2026-04-01 00:43:16,513 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 00:43:16,513 INFO New DataFrame shape: (2000, 14)
+2026-04-01 00:43:16,520 INFO Features saved at feature_store/features_20260401_004316.pkl
+2026-04-01 00:43:16,520 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 00:43:16,522 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 00:43:16,525 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 00:43:16,525 INFO Building model pipeline (DF-based)...
+2026-04-01 00:43:16,526 INFO Pipeline built successfully ✅
+2026-04-01 00:43:16,526 INFO Model Pipeline Created
+2026-04-01 00:43:17,245 INFO Model Training Completed
+2026-04-01 00:43:17,361 INFO Accuracy: 0.9975
+2026-04-01 00:43:17,361 INFO Precision: 1.0000
+2026-04-01 00:43:17,361 INFO Recall: 0.9872
+2026-04-01 00:43:17,362 INFO F1 Score: 0.9935
+2026-04-01 00:43:17,507 INFO Model Saved at: models/model_20260401_004316.pkl
+2026-04-01 00:43:17,507 INFO Pipeline Saved at: models/pipeline_20260401_004316.pkl
+2026-04-01 00:45:39,475 INFO Config loaded successfully
+2026-04-01 00:45:39,481 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 00:45:39,481 INFO Categorical features: ['Employment_Status']
+2026-04-01 00:45:40,137 INFO Config loaded successfully
+2026-04-01 00:45:40,143 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 00:45:40,227 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 00:45:40,235 INFO Missing values handled (no encoding applied)
+2026-04-01 00:45:40,235 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 00:45:40,236 INFO Starting feature engineering...
+2026-04-01 00:45:40,247 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 00:45:40,247 INFO New DataFrame shape: (2000, 14)
+2026-04-01 00:45:40,252 INFO Features saved at feature_store/features_20260401_004540.pkl
+2026-04-01 00:45:40,252 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 00:45:40,254 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 00:45:40,256 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 00:45:40,257 INFO Building model pipeline (DF-based)...
+2026-04-01 00:45:40,258 INFO Pipeline built successfully ✅
+2026-04-01 00:45:40,258 INFO Model Pipeline Created
+2026-04-01 00:45:41,022 INFO Model Training Completed
+2026-04-01 00:45:41,140 INFO Accuracy: 0.9975
+2026-04-01 00:45:41,140 INFO Precision: 1.0000
+2026-04-01 00:45:41,140 INFO Recall: 0.9872
+2026-04-01 00:45:41,140 INFO F1 Score: 0.9935
+2026-04-01 00:45:41,276 INFO Model Saved at: models/model_20260401_004540.pkl
+2026-04-01 00:45:41,276 INFO Pipeline Saved at: models/pipeline_20260401_004540.pkl
+2026-04-01 00:49:11,232 INFO Config loaded successfully
+2026-04-01 00:49:11,238 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 00:49:11,238 INFO Categorical features: ['Employment_Status']
+2026-04-01 00:49:11,356 INFO Config loaded successfully
+2026-04-01 00:49:11,361 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 00:49:11,438 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 00:49:11,445 INFO Missing values handled (no encoding applied)
+2026-04-01 00:49:11,445 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 00:49:11,445 INFO Starting feature engineering...
+2026-04-01 00:49:11,457 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 00:49:11,457 INFO New DataFrame shape: (2000, 14)
+2026-04-01 00:49:11,461 INFO Features saved at feature_store/features_20260401_004911.pkl
+2026-04-01 00:49:11,461 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 00:49:11,462 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 00:49:11,465 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 00:49:11,465 INFO Building model pipeline (DF-based)...
+2026-04-01 00:49:11,467 INFO Pipeline built successfully ✅
+2026-04-01 00:49:11,467 INFO Model Pipeline Created
+2026-04-01 00:49:12,177 INFO Model Training Completed
+2026-04-01 00:49:12,294 INFO Accuracy: 0.9975, Precision: 1.0000, Recall: 0.9872, F1: 0.9935
+2026-04-01 00:49:12,440 INFO Model Saved at: models/model_20260401_004911.pkl
+2026-04-01 00:49:12,440 INFO Pipeline Saved at: models/pipeline_20260401_004911.pkl
+2026-04-01 00:51:35,792 INFO Config loaded successfully
+2026-04-01 00:51:35,797 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 00:51:35,797 INFO Categorical features: ['Employment_Status']
+2026-04-01 00:51:35,912 INFO Config loaded successfully
+2026-04-01 00:51:35,917 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 00:51:35,994 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 00:51:36,000 INFO Missing values handled (no encoding applied)
+2026-04-01 00:51:36,001 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 00:51:36,001 INFO Starting feature engineering...
+2026-04-01 00:51:36,012 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 00:51:36,012 INFO New DataFrame shape: (2000, 14)
+2026-04-01 00:51:36,016 INFO Features saved at feature_store/features_20260401_005135.pkl
+2026-04-01 00:51:36,016 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 00:51:36,017 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 00:51:36,020 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 00:51:36,020 INFO Building model pipeline (DF-based)...
+2026-04-01 00:51:36,021 INFO Pipeline built successfully ✅
+2026-04-01 00:51:36,021 INFO Model Pipeline Created
+2026-04-01 00:51:36,800 INFO Model Training Completed
+2026-04-01 00:51:36,932 INFO Accuracy: 0.9975, Precision: 1.0000, Recall: 0.9872, F1: 0.9935
+2026-04-01 00:51:37,076 INFO Model Saved at: models/model_20260401_005135.pkl
+2026-04-01 00:51:37,076 INFO Pipeline Saved at: models/pipeline_20260401_005135.pkl
+2026-04-01 00:54:09,742 INFO Config loaded successfully
+2026-04-01 00:54:09,747 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 00:54:09,747 INFO Categorical features: ['Employment_Status']
+2026-04-01 00:54:09,870 INFO Config loaded successfully
+2026-04-01 00:54:09,877 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 00:54:09,959 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 00:54:09,967 INFO Missing values handled (no encoding applied)
+2026-04-01 00:54:09,967 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 00:54:09,967 INFO Starting feature engineering...
+2026-04-01 00:54:09,981 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 00:54:09,981 INFO New DataFrame shape: (2000, 14)
+2026-04-01 00:54:09,986 INFO Features saved at feature_store/features_20260401_005409.pkl
+2026-04-01 00:54:09,987 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 00:54:09,988 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 00:54:09,991 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 00:54:09,992 INFO Building model pipeline (DF-based)...
+2026-04-01 00:54:09,993 INFO Pipeline built successfully ✅
+2026-04-01 00:54:09,993 INFO Model Pipeline Created
+2026-04-01 00:54:10,703 INFO Model Training Completed
+2026-04-01 00:54:10,822 INFO Accuracy: 0.9975, Precision: 1.0000, Recall: 0.9872, F1: 0.9935
+2026-04-01 00:54:10,976 INFO Model Saved at: models/model_20260401_005409.pkl
+2026-04-01 00:54:10,976 INFO Pipeline Saved at: models/pipeline_20260401_005409.pkl
+2026-04-01 00:56:39,628 INFO Config loaded successfully
+2026-04-01 00:56:39,634 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 00:56:39,634 INFO Categorical features: ['Employment_Status']
+2026-04-01 00:56:39,755 INFO Config loaded successfully
+2026-04-01 00:56:39,760 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 00:56:39,836 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 00:56:39,843 INFO Missing values handled (no encoding applied)
+2026-04-01 00:56:39,843 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 00:56:39,843 INFO Starting feature engineering...
+2026-04-01 00:56:39,854 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 00:56:39,855 INFO New DataFrame shape: (2000, 14)
+2026-04-01 00:56:39,859 INFO Features saved at feature_store/features_20260401_005639.pkl
+2026-04-01 00:56:39,860 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 00:56:39,861 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 00:56:39,865 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 00:56:39,865 INFO Building model pipeline (DF-based)...
+2026-04-01 00:56:39,867 INFO Pipeline built successfully ✅
+2026-04-01 00:56:39,867 INFO Model Pipeline Created
+2026-04-01 00:56:40,644 INFO Model Training Completed
+2026-04-01 00:56:40,812 INFO Accuracy: 0.9975, Precision: 1.0000, Recall: 0.9872, F1: 0.9935
+2026-04-01 00:56:41,102 INFO Model Saved at: models/model_20260401_005639.pkl
+2026-04-01 00:56:41,102 INFO Pipeline Saved at: models/pipeline_20260401_005639.pkl
+2026-04-01 00:57:55,138 INFO Config loaded successfully
+2026-04-01 00:57:55,143 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 00:57:55,143 INFO Categorical features: ['Employment_Status']
+2026-04-01 00:57:55,265 INFO Config loaded successfully
+2026-04-01 00:57:55,270 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 00:57:55,373 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 00:57:55,379 INFO Missing values handled (no encoding applied)
+2026-04-01 00:57:55,379 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 00:57:55,379 INFO Starting feature engineering...
+2026-04-01 00:57:55,389 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 00:57:55,389 INFO New DataFrame shape: (2000, 14)
+2026-04-01 00:57:55,393 INFO Features saved at feature_store/features_20260401_005755.pkl
+2026-04-01 00:57:55,393 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 00:57:55,395 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 00:57:55,399 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 00:57:55,399 INFO Building model pipeline (DF-based)...
+2026-04-01 00:57:55,401 INFO Pipeline built successfully ✅
+2026-04-01 00:57:56,100 INFO Model Training Completed
+2026-04-01 00:57:56,219 INFO Accuracy: 0.9975, Precision: 1.0000, Recall: 0.9872, F1: 0.9935
+2026-04-01 01:04:48,286 INFO Config loaded successfully
+2026-04-01 01:04:48,291 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 01:04:48,291 INFO Categorical features: ['Employment_Status']
+2026-04-01 01:04:48,411 INFO Config loaded successfully
+2026-04-01 01:04:48,416 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 01:04:48,490 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 01:04:48,497 INFO Missing values handled (no encoding applied)
+2026-04-01 01:04:48,497 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 01:04:48,497 INFO Starting feature engineering...
+2026-04-01 01:04:48,507 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 01:04:48,507 INFO New DataFrame shape: (2000, 14)
+2026-04-01 01:04:48,511 INFO Features saved at feature_store/features_20260401_010448.pkl
+2026-04-01 01:04:48,512 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 01:04:48,513 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 01:04:48,515 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 01:04:48,516 INFO Building model pipeline (DF-based)...
+2026-04-01 01:04:48,517 INFO Pipeline built successfully ✅
+2026-04-01 01:04:48,517 INFO Model Pipeline Created
+2026-04-01 01:04:49,206 INFO Model Training Completed
+2026-04-01 01:04:49,323 INFO Accuracy: 0.9975
+2026-04-01 01:04:49,324 INFO Precision: 1.0000
+2026-04-01 01:04:49,324 INFO Recall: 0.9872
+2026-04-01 01:04:49,324 INFO F1 Score: 0.9935
+2026-04-01 01:04:49,476 INFO Model Saved at: models/model_20260401_010448.pkl
+2026-04-01 01:04:49,477 INFO Pipeline Saved at: models/pipeline_20260401_010448.pkl
+2026-04-01 02:40:17,935 INFO Config loaded successfully
+2026-04-01 02:40:17,953 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 02:40:17,953 INFO Categorical features: ['Employment_Status']
+2026-04-01 02:40:18,096 INFO Config loaded successfully
+2026-04-01 02:40:18,102 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 02:40:18,266 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 02:40:18,274 INFO Missing values handled (no encoding applied)
+2026-04-01 02:40:18,275 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 02:40:18,275 INFO Using target column: Loan_Approved
+2026-04-01 02:40:18,275 INFO Starting feature engineering...
+2026-04-01 02:40:18,297 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 02:40:18,299 INFO New DataFrame shape: (2000, 14)
+2026-04-01 02:40:18,305 INFO Features saved at feature_store/features_20260401_024018.pkl
+2026-04-01 02:40:18,306 INFO Feature Engineering Done | Shape: (2000, 14) | Saved at feature_store/features_20260401_024018.pkl
+2026-04-01 02:40:18,310 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 02:40:18,315 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 02:40:18,316 INFO Building model pipeline (DF-based)...
+2026-04-01 02:40:18,318 INFO Pipeline built successfully ✅
+2026-04-01 02:40:18,318 INFO Model Pipeline Created
+2026-04-01 02:40:19,349 INFO Model Training Completed
+2026-04-01 02:40:19,539 INFO Accuracy: 0.9975
+2026-04-01 02:40:19,539 INFO Precision: 1.0000
+2026-04-01 02:40:19,540 INFO Recall: 0.9872
+2026-04-01 02:40:19,540 INFO F1 Score: 0.9935
+2026-04-01 02:40:19,742 INFO Model Saved at: models/model_20260401_024018.pkl
+2026-04-01 02:40:19,742 INFO Pipeline Saved at: models/pipeline_20260401_024018.pkl
+2026-04-01 03:56:25,090 INFO Config loaded successfully
+2026-04-01 03:58:16,984 INFO Config loaded successfully
+2026-04-01 04:04:11,993 INFO Config loaded successfully
+2026-04-01 04:04:11,998 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 04:04:11,998 INFO Categorical features: ['Employment_Status']
+2026-04-01 04:04:12,120 INFO Config loaded successfully
+2026-04-01 04:06:06,873 INFO Config loaded successfully
+2026-04-01 04:06:06,879 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 04:06:06,879 INFO Categorical features: ['Employment_Status']
+2026-04-01 04:06:07,014 INFO Config loaded successfully
+2026-04-01 04:06:07,019 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 04:06:07,039 WARNING Retrying (Retry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 04:06:11,406 WARNING Retrying (Retry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 04:06:19,769 WARNING Retrying (Retry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 04:06:35,917 WARNING Retrying (Retry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 04:07:08,193 WARNING Retrying (Retry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='127.0.0.1', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 04:11:39,153 INFO Config loaded successfully
+2026-04-01 04:11:39,160 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 04:11:39,160 INFO Categorical features: ['Employment_Status']
+2026-04-01 04:11:39,294 INFO Config loaded successfully
+2026-04-01 04:11:39,299 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 04:11:40,193 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 04:11:40,200 INFO Missing values handled (no encoding applied)
+2026-04-01 04:11:40,200 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 04:11:40,200 INFO Starting feature engineering...
+2026-04-01 04:11:40,211 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 04:11:40,211 INFO New DataFrame shape: (2000, 14)
+2026-04-01 04:11:40,215 INFO Features saved at feature_store/features_20260401_041139.pkl
+2026-04-01 04:11:40,216 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 04:11:40,217 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 04:11:40,220 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 04:11:40,220 INFO Building model pipeline (DF-based)...
+2026-04-01 04:11:40,221 INFO Pipeline built successfully ✅
+2026-04-01 04:11:40,221 INFO Model Pipeline Created
+2026-04-01 04:11:40,964 INFO Model Training Completed
+2026-04-01 04:11:41,081 INFO Accuracy: 0.9975
+2026-04-01 04:11:41,081 INFO Precision: 1.0000
+2026-04-01 04:11:41,082 INFO Recall: 0.9872
+2026-04-01 04:11:41,082 INFO F1 Score: 0.9935
+2026-04-01 04:11:41,219 INFO Model Saved at: models/model_20260401_041139.pkl
+2026-04-01 04:11:41,219 INFO Pipeline Saved at: models/pipeline_20260401_041139.pkl
+2026-04-01 04:11:43,937 INFO Metadata Saved
+2026-04-01 04:11:43,937 INFO ===== TRAINING PIPELINE COMPLETED =====
+2026-04-01 05:29:44,299 INFO Config loaded successfully
+2026-04-01 05:29:44,308 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 05:29:44,308 INFO Categorical features: ['Employment_Status']
+2026-04-01 05:29:44,427 INFO Config loaded successfully
+2026-04-01 05:29:44,432 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 05:29:44,538 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 05:29:44,546 INFO Missing values handled (no encoding applied)
+2026-04-01 05:29:44,547 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 05:29:44,547 INFO Starting feature engineering...
+2026-04-01 05:29:44,560 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 05:29:44,560 INFO New DataFrame shape: (2000, 14)
+2026-04-01 05:29:44,564 INFO Features saved at feature_store/features_20260401_052944.pkl
+2026-04-01 05:29:44,564 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 05:29:44,566 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 05:29:44,569 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 05:29:44,569 INFO Building model pipeline (DF-based)...
+2026-04-01 05:29:44,571 INFO Pipeline built successfully ✅
+2026-04-01 05:29:44,571 INFO Model Pipeline Created
+2026-04-01 05:29:45,278 INFO Model Training Completed
+2026-04-01 05:29:45,396 INFO Accuracy: 0.9975
+2026-04-01 05:29:45,396 INFO Precision: 1.0000
+2026-04-01 05:29:45,396 INFO Recall: 0.9872
+2026-04-01 05:29:45,396 INFO F1 Score: 0.9935
+2026-04-01 05:29:45,539 INFO Model Saved at: models/model_20260401_052944.pkl
+2026-04-01 05:29:45,539 INFO Pipeline Saved at: models/pipeline_20260401_052944.pkl
+2026-04-01 05:29:47,963 INFO Metadata Saved
+2026-04-01 05:29:47,963 INFO ===== TRAINING PIPELINE COMPLETED =====
+2026-04-01 06:14:52,584 INFO Config loaded successfully
+2026-04-01 06:14:52,594 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 06:14:52,594 INFO Categorical features: ['Employment_Status']
+2026-04-01 06:14:52,716 INFO Config loaded successfully
+2026-04-01 06:14:52,722 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 06:14:53,206 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 06:14:53,215 INFO Missing values handled (no encoding applied)
+2026-04-01 06:14:53,215 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 06:14:53,215 INFO Starting feature engineering...
+2026-04-01 06:14:53,227 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 06:14:53,228 INFO New DataFrame shape: (2000, 14)
+2026-04-01 06:14:53,232 INFO Features saved at feature_store/features_20260401_061452.pkl
+2026-04-01 06:14:53,232 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 06:14:53,233 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 06:14:53,236 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 06:14:53,236 INFO Building model pipeline (DF-based)...
+2026-04-01 06:14:53,237 INFO Pipeline built successfully ✅
+2026-04-01 06:14:53,237 INFO Model Pipeline Created
+2026-04-01 06:14:53,944 INFO Model Training Completed
+2026-04-01 06:14:54,059 INFO Accuracy: 0.9975
+2026-04-01 06:14:54,059 INFO Precision: 1.0000
+2026-04-01 06:14:54,059 INFO Recall: 0.9872
+2026-04-01 06:14:54,059 INFO F1 Score: 0.9935
+2026-04-01 06:14:54,202 INFO Model Saved at: models/model_20260401_061452.pkl
+2026-04-01 06:14:54,202 INFO Pipeline Saved at: models/pipeline_20260401_061452.pkl
+2026-04-01 06:14:56,432 INFO Metadata Saved
+2026-04-01 06:14:56,432 INFO ===== TRAINING PIPELINE COMPLETED =====
+2026-04-01 23:32:01,393 INFO Config loaded successfully
+2026-04-01 23:32:01,400 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 23:32:01,401 INFO Categorical features: ['Employment_Status']
+2026-04-01 23:32:01,527 INFO Config loaded successfully
+2026-04-01 23:32:01,532 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 23:32:01,549 WARNING Retrying (Retry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 23:32:05,763 WARNING Retrying (Retry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 23:32:12,519 WARNING Retrying (Retry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 23:32:29,338 WARNING Retrying (Retry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 23:33:00,271 WARNING Retrying (Retry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [Errno 111] Connection refused")': /api/2.0/mlflow/experiments/get-by-name?experiment_name=loan_prediction_model
+2026-04-01 23:35:58,878 INFO Config loaded successfully
+2026-04-01 23:35:58,885 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 23:35:58,885 INFO Categorical features: ['Employment_Status']
+2026-04-01 23:35:59,008 INFO Config loaded successfully
+2026-04-01 23:35:59,013 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 23:35:59,120 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 23:35:59,128 INFO Missing values handled (no encoding applied)
+2026-04-01 23:35:59,128 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 23:35:59,128 INFO Starting feature engineering...
+2026-04-01 23:35:59,140 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 23:35:59,141 INFO New DataFrame shape: (2000, 14)
+2026-04-01 23:35:59,146 INFO Features saved at feature_store/features_20260401_233559.pkl
+2026-04-01 23:35:59,146 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 23:35:59,148 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 23:35:59,152 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 23:35:59,153 INFO Building model pipeline (DF-based)...
+2026-04-01 23:35:59,154 INFO Pipeline built successfully ✅
+2026-04-01 23:35:59,154 INFO Model Pipeline Created
+2026-04-01 23:35:59,900 INFO Model Training Completed
+2026-04-01 23:36:00,018 INFO Accuracy: 0.9975
+2026-04-01 23:36:00,018 INFO Precision: 1.0000
+2026-04-01 23:36:00,018 INFO Recall: 0.9872
+2026-04-01 23:36:00,019 INFO F1 Score: 0.9935
+2026-04-01 23:36:00,170 INFO Model Saved at: models/model_20260401_233559.pkl
+2026-04-01 23:36:00,170 INFO Pipeline Saved at: models/pipeline_20260401_233559.pkl
+2026-04-01 23:36:02,752 INFO Metadata Saved
+2026-04-01 23:36:02,752 INFO ===== TRAINING PIPELINE COMPLETED =====
+2026-04-01 23:51:32,057 INFO Config loaded successfully
+2026-04-01 23:51:32,064 INFO Numeric features: ['Age', 'Income', 'Credit_Score', 'Loan_Amount', 'Loan_Term']
+2026-04-01 23:51:32,064 INFO Categorical features: ['Employment_Status']
+2026-04-01 23:51:32,194 INFO Config loaded successfully
+2026-04-01 23:51:32,200 INFO ===== TRAINING PIPELINE STARTED =====
+2026-04-01 23:51:32,305 INFO Data loaded from data/loan.csv, shape: (2000, 7)
+2026-04-01 23:51:32,313 INFO Missing values handled (no encoding applied)
+2026-04-01 23:51:32,313 INFO Data Loaded | Shape: (2000, 7)
+2026-04-01 23:51:32,314 INFO Starting feature engineering...
+2026-04-01 23:51:32,325 INFO Feature engineering completed. Added features: ['EMI', 'Income_Loan_Ratio', 'Loan_Burden', 'Income_per_EMI', 'Credit_Category', 'Income_Group', 'Age_Group']
+2026-04-01 23:51:32,325 INFO New DataFrame shape: (2000, 14)
+2026-04-01 23:51:32,330 INFO Features saved at feature_store/features_20260401_235132.pkl
+2026-04-01 23:51:32,330 INFO Feature Engineering Done | Shape: (2000, 14)
+2026-04-01 23:51:32,331 INFO Splitting data: test_size=0.2, random_state=42
+2026-04-01 23:51:32,335 INFO Split Done | Train: (1600, 13) | Test: (400, 13)
+2026-04-01 23:51:32,335 INFO Building model pipeline (DF-based)...
+2026-04-01 23:51:32,336 INFO Pipeline built successfully ✅
+2026-04-01 23:51:32,337 INFO Model Pipeline Created
+2026-04-01 23:51:33,103 INFO Model Training Completed
+2026-04-01 23:51:33,241 INFO Accuracy: 0.9975
+2026-04-01 23:51:33,241 INFO Precision: 1.0000
+2026-04-01 23:51:33,241 INFO Recall: 0.9872
+2026-04-01 23:51:33,241 INFO F1 Score: 0.9935
+2026-04-01 23:51:33,409 INFO Model Saved at: models/model_20260401_235132.pkl
+2026-04-01 23:51:33,409 INFO Pipeline Saved at: models/pipeline_20260401_235132.pkl
+2026-04-01 23:51:36,125 INFO Metadata Saved
+2026-04-01 23:51:36,125 INFO ===== TRAINING PIPELINE COMPLETED =====

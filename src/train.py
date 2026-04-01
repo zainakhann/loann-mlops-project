@@ -85,19 +85,19 @@ def main():
     logging.info("===== TRAINING PIPELINE STARTED =====")
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-# ----------------------------
-# MLflow setup (FIXED)
-# ----------------------------
-IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
+    # ----------------------------
+    # MLflow setup (FIXED)
+    # ----------------------------
+    IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
 
-if IS_CI:
-    # ✅ Simple local logging (NO artifact_uri confusion)
-    mlflow.set_tracking_uri("file:./mlruns")
-else:
-    # ✅ Use your local MLflow server normally
-    mlflow.set_tracking_uri(MLFLOW_URI)
+    if IS_CI:
+        # ✅ Simple local logging (NO artifact_uri confusion)
+        mlflow.set_tracking_uri("file:./mlruns")
+    else:
+        # ✅ Use your local MLflow server normally
+        mlflow.set_tracking_uri(MLFLOW_URI)
 
-mlflow.set_experiment(EXPERIMENT_NAME)
+    mlflow.set_experiment(EXPERIMENT_NAME)
 
     with mlflow.start_run(run_name=f"train_{timestamp}"):
         # ----------------------------
