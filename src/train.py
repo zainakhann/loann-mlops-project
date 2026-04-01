@@ -99,19 +99,16 @@ def main():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     # ----------------------------
-    # MLflow setup (FIXED)
+    # MLflow setup (CI-proof)
     # ----------------------------
     IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
+    MLRUNS_PATH = os.path.abspath("mlruns")  # absolute path for local file store
 
-    if IS_CI:
-        # GitHub Actions → force local tracking
-        mlflow.set_tracking_uri("file:./mlruns")
-    elif MLFLOW_URI:
-        # Local MLflow server
-        mlflow.set_tracking_uri(MLFLOW_URI)
+    if IS_CI or not MLFLOW_URI:
+        # Use local file store with absolute path
+        mlflow.set_tracking_uri(f"file://{MLRUNS_PATH}")
     else:
-        # Fallback
-        mlflow.set_tracking_uri("file:./mlruns")
+        mlflow.set_tracking_uri(MLFLOW_URI)
 
     mlflow.set_experiment(EXPERIMENT_NAME)
 
@@ -201,9 +198,10 @@ def main():
         mlflow.log_metric("recall", rec)
         mlflow.log_metric("f1_score", f1)
 
-        mlflow.sklearn.log_model(pipeline, "model")
+        # Log model without triggering proxy issue
+        mlflow.sklearn.log_model(pipeline, "model", artifact_path="model")
 
-        # Artifacts
+        # Log artifacts
         mlflow.log_artifact(model_path, artifact_path="model")
         mlflow.log_artifact(pipeline_path, artifact_path="pipeline")
         mlflow.log_artifact(feature_path, artifact_path="features")
