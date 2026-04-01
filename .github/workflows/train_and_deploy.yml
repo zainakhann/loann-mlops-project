@@ -94,6 +94,12 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       # ----------------------------
+      # Verify Docker login (new step)
+      # ----------------------------
+      - name: Verify Docker login
+        run: docker info
+
+      # ----------------------------
       # Build & Push Docker Image
       # ----------------------------
       - name: Build & Push Docker Image
