@@ -105,5 +105,7 @@ jobs:
       - name: Build & Push Docker Image
         run: |
           docker build -t loan-mlops:latest .
-          docker tag loan-mlops:latest yourusername/loan-mlops:latest
-          docker push yourusername/loan-mlops:latest
+          docker tag loann-mlops:latest zainakhann/loann-mlops:latest
+          docker push zainakhann/loann-mlops:tagname
+          
+          
